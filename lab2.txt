@@ -1,0 +1,61 @@
+.:
+total 8
+drw-r--r-- 2 Qvver7y Qvver7y 4096 Oct  3 16:33 dir
+-rw-r----- 1 root    Qvver7y    5 Oct  3 16:31 file
+-rw------- 1 Qvver7y Qvver7y    0 Oct  3 16:50 file1
+-rw-rw-rw- 1 Qvver7y Qvver7y    0 Oct  3 16:51 file2
+
+./dir:
+total 4
+-rw-r--r-- 1 Qvver7y Qvver7y 7 Oct  3 16:34 new_file
+    1  cd ~/
+    2  mkdir test
+    3  cd test/
+    4  touch file 
+    5  ls -l
+    6  chmod ugo-rwx file 
+    7  echo "test" > file
+    8  cat file
+    9  chmod u+w file 
+   10  ls -l
+   11  echo "test" > file
+   12  cat file
+   13  chmod g+r file 
+   14  cat file 
+   15  ls -l
+   16  chmod u+r file
+   17  cat file 
+   18  mkdir new_file
+   19  rmdir new_file/
+   20  mkdir dir 
+   21  touch ./dir/new_file
+   22  echo "file 2" > ./dir/new_file 
+   23  ls ./dir/
+   24  chmod ugo-x ./dir/
+   25  ls -l
+   26  cat ./dir/new_file 
+   27  chown root file 
+   28  chgrp root file 
+   29  ls -l
+   30  man umask
+   31  umask -p
+   32  umask 0177
+   33  umask -p
+   34  tocuh file1
+   35  ls -l
+   36  touch file1
+   37  ls -l
+   38  umask 111
+   39  touch file2
+   40  ls -l
+   41  su
+   42  cat file
+   43  sudo chmod g+r file
+   44  ls -l
+   45  cat file
+   46  ls -lR
+   47  ls -lR > ~/Documents/lab2.txt
+   48  sudo ls -lR > ~/Documents/lab2.txt
+   49  sudo history >> ~/Documents/lab2.txt
+   50  sudo history >> ~/Documents/lab2.txt
+   51  history >> ~/Documents/lab2.txt
