@@ -1,5 +1,11 @@
 #!/bin/bash
-find ~ -name ".txt" > /tmp/temp.txt 2>/dev/null
-cat /tmp/temp.txt | wc -l
-du -h /tmp/temp.txt | cut -f1
-rm /tmp/temp.txt
+echo "Каталоги:"
+ls -l "$1" | grep ^d
+echo "Обычные файлы:"
+ls -l "$1" | grep ^-
+echo "Символьные ссылки:"
+ls -l "$1" | grep ^l
+echo "Символьные устройства:"
+ls -l "$1" | grep ^c
+echo "Блочные устройства:"
+ls -l "$1" | grep ^b
