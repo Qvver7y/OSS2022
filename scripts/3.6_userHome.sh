@@ -1,5 +1,3 @@
 #!/bin/bash
-
-(( NUM = $(echo $USER $HOME | wc -m ) - 2 ))
-
-echo $USER $HOME $NUM
+COUNT=`echo -e "$USER$HOME" | tr -d "\n" | wc -c`
+echo "$USER $HOME $COUNT"

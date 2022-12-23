@@ -1,4 +1,3 @@
 #!/bin/bash
-#
-cat  "$2" | grep "$1" -m "$3"   | sort | nl 
+grep "$1" "$2" -m "$3" | sort | cat -n
 
